@@ -19,7 +19,7 @@ jobs:
         distribution: 'temurin'  # Thêm dòng này
 
     - name: Build with Maven
-      run: mvn install
+      run: mvn install apache-maven-3.9.9
 
     - name: Run tests
       run: mvn test
