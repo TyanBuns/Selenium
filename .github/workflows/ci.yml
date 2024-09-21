@@ -20,8 +20,8 @@ jobs:
 
     - name: Compile Java code
       run: |
-        javac -d bin src/main/java/Dangnhap/UserRegistrationTestNG.java  # Thay đổi đường dẫn nếu cần
+        javac -d bin -cp "libs/*:." src/main/java/Dangnhap/UserRegistrationTestNG.java  # Cập nhật đường dẫn nếu cần
 
     - name: Run tests
       run: |
-        java -cp bin org.junit.runner.JUnitCore UserRegistrationTestNG.java  # Thay đổi với tên lớp test của bạn
+        java -cp "bin:libs/*" org.junit.runner.JUnitCore Dangnhap.UserRegistrationTestNG  # Cập nhật tên lớp test của bạn
