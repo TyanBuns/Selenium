@@ -15,7 +15,8 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v3
       with:
-        java-version: '21'  # hoặc phiên bản Java bạn đang sử dụng
+        java-version: '21'  # Sử dụng Java 21
+        distribution: 'adopt'  # Có thể là 'adopt', 'zulu', 'temurin', v.v.
 
     - name: Build with Maven
       run: mvn install
